@@ -1,21 +1,29 @@
 # Corey Higgins
 
-IT support and systems administration. I keep production Linux servers running and the people using them unblocked.
+I run production Linux infrastructure and publish the tools that fall out of it.
 
-I run a small software studio: Ubuntu Linux, MySQL, staged deploys with rollback, monitoring, and being the only person on call. Before that I built and ran a Linux VPS hosting business serving over a thousand client servers, which is where I learned that the boring parts, backups, monitoring, and a rollback you have actually tested, are the parts that matter at 3am.
+Ubuntu and systemd, MySQL, staged deploys with a rollback I have actually tested, monitoring, and being the only person on call. Before this I ran a Linux VPS hosting business serving over a thousand client servers, which is where I learned that the boring parts are the parts that matter at 3am.
 
-**Working with:** Ubuntu Linux, systemd, nginx, MySQL, Bash, Python, Node.js, Java, Active Directory, Windows Server, Zendesk and Jira
+Everything here is something I use.
 
-### Repositories
+## blastradius
 
-- **[linux-deploy-toolkit](https://github.com/CoreyH32/linux-deploy-toolkit)** — staged releases, atomic symlink swap, health check, automatic rollback
-- **[jvm-shutdown-watchdog](https://github.com/CoreyH32/jvm-shutdown-watchdog)** — forces a wedged JVM to exit and names the threads that wedged it
-- **[failsoft-webhook](https://github.com/CoreyH32/failsoft-webhook)** — webhook alerting that cannot block, throw, or hold the process open
-- **[service-health-monitor](https://github.com/CoreyH32/service-health-monitor)** — endpoint and systemd unit checks on a timer, alerting on state change rather than every run
-- **[mcp-server-example](https://github.com/CoreyH32/mcp-server-example)** — dependency-free Model Context Protocol server over stdio
+[**blastradius**](https://github.com/CoreyH32/blastradius) guards AI coding agents against shell commands that leave your machine.
 
-Currently working toward CompTIA Security+ (November 2026). Harvard CS50 certified.
+Agent checkpointing covers file edits. Anthropic's own documentation says it does not cover bash, which is where `ssh`, `terraform`, `kubectl`, `docker compose down -v`, and `git push --force` live. An agent working from a stale Terraform state ran `terraform destroy` and took out a production database along with its snapshots. The source files were fine. That was never the problem.
 
-Open to IT support, technical support engineering, and systems administration roles. Remote or hybrid.
+It classifies a command on two axes, how far it reaches and whether it destroys anything, and only interrupts on the intersection. `kubectl get pods` is remote and harmless. `rm -rf ./build` is destructive and local. Neither deserves a prompt. Custom rules can only escalate and never allowlist, because the agent being guarded can write files.
 
-Rome, GA · corey@wynfall.dev
+Zero dependencies. Installs as a Claude Code plugin.
+
+## Also published
+
+| | |
+|---|---|
+| [linux-deploy-toolkit](https://github.com/CoreyH32/linux-deploy-toolkit) | Versioned releases, atomic symlink swap, health check, automatic rollback |
+| [jvm-shutdown-watchdog](https://github.com/CoreyH32/jvm-shutdown-watchdog) | Forces a wedged JVM to exit and names the threads that wedged it |
+| [failsoft-webhook](https://github.com/CoreyH32/failsoft-webhook) | Webhook alerting that cannot block, throw, or hold the process open |
+| [service-health-monitor](https://github.com/CoreyH32/service-health-monitor) | Endpoint and unit checks on a timer, alerting on state change rather than every run |
+| [mcp-server-example](https://github.com/CoreyH32/mcp-server-example) | Dependency-free Model Context Protocol server over stdio |
+
+Georgia, US · corey@wynfall.dev
