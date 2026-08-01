@@ -16,4 +16,4 @@ Currently working toward CompTIA Security+ (November 2026). Harvard CS50 certifi
 
 Open to IT support, technical support engineering, and systems administration roles. Remote or hybrid.
 
-Rome, GA · baseballcorey32@gmail.com
+Rome, GA · corey@wynfall.dev
