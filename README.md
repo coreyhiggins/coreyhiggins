@@ -9,6 +9,8 @@ I run a small software studio: Ubuntu Linux, MySQL, staged deploys with rollback
 ### Repositories
 
 - **[linux-deploy-toolkit](https://github.com/CoreyH32/linux-deploy-toolkit)** — staged releases, atomic symlink swap, health check, automatic rollback
+- **[jvm-shutdown-watchdog](https://github.com/CoreyH32/jvm-shutdown-watchdog)** — forces a wedged JVM to exit and names the threads that wedged it
+- **[failsoft-webhook](https://github.com/CoreyH32/failsoft-webhook)** — webhook alerting that cannot block, throw, or hold the process open
 - **[service-health-monitor](https://github.com/CoreyH32/service-health-monitor)** — endpoint and systemd unit checks on a timer, alerting on state change rather than every run
 - **[mcp-server-example](https://github.com/CoreyH32/mcp-server-example)** — dependency-free Model Context Protocol server over stdio
 
