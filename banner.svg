@@ -1,38 +1,119 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Corey Higgins, founder and head of engineering at Wynfall Studios">
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1500 500' width='1500' height='500' role='img' aria-label='Corey Higgins, founder and engineer at Wynfall Studios'>
   <defs>
-    <radialGradient id="glow" cx="18%" cy="12%" r="72%">
-      <stop offset="0%" stop-color="#5fe8ff" stop-opacity="0.16"/>
-      <stop offset="55%" stop-color="#5fe8ff" stop-opacity="0.03"/>
-      <stop offset="100%" stop-color="#5fe8ff" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
-      <circle cx="1.2" cy="1.2" r="1.2" fill="#5fe8ff" fill-opacity="0.13"/>
-    </pattern>
-    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#5fe8ff" stop-opacity="0.85"/>
-      <stop offset="65%" stop-color="#5fe8ff" stop-opacity="0.10"/>
-      <stop offset="100%" stop-color="#5fe8ff" stop-opacity="0"/>
+    <linearGradient id='sky' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0' stop-color='#d6d8cf'/>
+      <stop offset='0.26' stop-color='#e2ddd1'/>
+      <stop offset='0.50' stop-color='#ecdfcc'/>
+      <stop offset='0.72' stop-color='#f3ddc3'/>
+      <stop offset='1' stop-color='#f9e7cd'/>
     </linearGradient>
+    <radialGradient id='dawn' cx='0.30' cy='0.90' r='0.66'>
+      <stop offset='0' stop-color='#ffcf96' stop-opacity='0.52'/>
+      <stop offset='0.42' stop-color='#ffd9ab' stop-opacity='0.18'/>
+      <stop offset='1' stop-color='#ffddb4' stop-opacity='0'/>
+    </radialGradient>
+    <linearGradient id='cool' x1='0' y1='0' x2='1' y2='0'>
+      <stop offset='0' stop-color='#b4bcc2' stop-opacity='0'/>
+      <stop offset='1' stop-color='#b4bcc2' stop-opacity='0.38'/>
+    </linearGradient>
+    <linearGradient id='r1' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0' stop-color='#cfcfc6'/>
+      <stop offset='1' stop-color='#c2c3ba'/>
+    </linearGradient>
+    <linearGradient id='r2' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0' stop-color='#b0b3af'/>
+      <stop offset='1' stop-color='#9ea3a1'/>
+    </linearGradient>
+    <linearGradient id='r3' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0' stop-color='#878f96'/>
+      <stop offset='1' stop-color='#6d767f'/>
+    </linearGradient>
+    <linearGradient id='front' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0' stop-color='#39424c'/>
+      <stop offset='0.55' stop-color='#252d36'/>
+      <stop offset='1' stop-color='#161d25'/>
+    </linearGradient>
+    <linearGradient id='haze' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0' stop-color='#f7e5cb' stop-opacity='0'/>
+      <stop offset='0.5' stop-color='#f7e5cb' stop-opacity='0.46'/>
+      <stop offset='1' stop-color='#f9e9d2' stop-opacity='0.06'/>
+    </linearGradient>
+    <linearGradient id='rim' x1='0' y1='0' x2='1' y2='0'>
+      <stop offset='0' stop-color='#ffe6c2' stop-opacity='0.75'/>
+      <stop offset='0.55' stop-color='#ffe6c2' stop-opacity='0.18'/>
+      <stop offset='1' stop-color='#ffe6c2' stop-opacity='0'/>
+    </linearGradient>
+    <filter id='soft' x='-40%' y='-80%' width='180%' height='260%'>
+      <feGaussianBlur stdDeviation='24'/>
+    </filter>
+    <filter id='hazeblur' x='-20%' y='-40%' width='140%' height='180%'>
+      <feGaussianBlur stdDeviation='9'/>
+    </filter>
+    <filter id='grain' x='0' y='0' width='100%' height='100%'>
+      <feTurbulence type='fractalNoise' baseFrequency='0.84' numOctaves='2' stitchTiles='stitch'/>
+      <feColorMatrix type='saturate' values='0'/>
+    </filter>
+
+    <mask id='wfcuts' maskUnits='userSpaceOnUse' x='-200' y='-520' width='400' height='580'>
+      <rect x='-200' y='-520' width='400' height='580' fill='#fff'/>
+      <path d='M 0,-50 C -16,-180 -6,-320 26,-455' pathLength='100' stroke='#000' stroke-width='4' fill='none' stroke-dasharray='91 100'/>
+      <g fill='#000'>
+        <path d='M 61,-178 L 56,-164 Q 32,-142 8,-122 Q 32,-150 61,-178 Z'/>
+        <path d='M 74,-256 L 71,-243 Q 42,-216 8,-187 Q 40,-222 74,-256 Z'/>
+        <path d='M 72,-350 L 74,-334 Q 44,-308 12,-282 Q 42,-314 72,-350 Z'/>
+        <path d='M -51,-208 L -47,-192 Q -28,-166 -12,-146 Q -28,-178 -51,-208 Z'/>
+        <path d='M -52,-298 L -51,-284 Q -32,-254 -12,-232 Q -32,-264 -52,-298 Z'/>
+      </g>
+    </mask>
+
+    <symbol id='feather' viewBox='87 34 338 444'>
+      <g transform='translate(103 460) scale(1.15) rotate(40) scale(-1 1)'>
+        <path d='M 0,14 L -3,-58 L 3,-58 Z' fill='#16202b'/>
+        <g mask='url(#wfcuts)'>
+          <path d='M 0,-50 C 30,-95 68,-170 74,-270 C 78,-350 58,-418 26,-455 C -6,-320 -16,-180 0,-50 Z' fill='#16202b'/>
+          <path d='M 0,-50 C -22,-85 -48,-150 -50,-240 C -52,-330 -22,-415 26,-455 C -6,-320 -16,-180 0,-50 Z' fill='#16202b'/>
+        </g>
+      </g>
+    </symbol>
   </defs>
 
-  <rect width="1200" height="300" fill="#06090a"/>
-  <rect width="1200" height="300" fill="url(#glow)"/>
-  <rect x="700" y="0" width="500" height="300" fill="url(#dots)"/>
+  <rect width='1500' height='500' fill='url(#sky)'/>
+  <rect width='1500' height='500' fill='url(#dawn)'/>
+  <rect width='1500' height='500' fill='url(#cool)'/>
 
-  <g stroke="#5fe8ff" fill="none" stroke-linecap="round" opacity="0.5">
-    <path d="M1010 216 A 96 96 0 0 1 1106 120" stroke-width="1.6" opacity="0.55"/>
-    <path d="M983 216 A 123 123 0 0 1 1106 93" stroke-width="1.2" opacity="0.34"/>
-    <path d="M956 216 A 150 150 0 0 1 1106 66" stroke-width="1" opacity="0.2"/>
-    <path d="M929 216 A 177 177 0 0 1 1106 39" stroke-width="0.8" opacity="0.12"/>
-  </g>
-  <circle cx="1106" cy="216" r="3.4" fill="#5fe8ff"/>
-  <line x1="1010" y1="216" x2="1106" y2="216" stroke="#5fe8ff" stroke-width="1" opacity="0.25"/>
-
-  <g font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <text x="72" y="108" fill="#5fe8ff" font-size="13.5" font-weight="600" letter-spacing="5.4" opacity="0.92">WYNFALL STUDIOS</text>
-    <text x="72" y="178" fill="#f7fafb" font-size="60" font-weight="600" letter-spacing="-1.2">Corey Higgins</text>
-    <text x="73" y="219" fill="#93a1a8" font-size="19.5" font-weight="400" letter-spacing="0.2">Founder and head of engineering</text>
+  <g filter='url(#soft)' opacity='0.44'>
+    <ellipse cx='236' cy='164' rx='300' ry='24' fill='#fdf4e5'/>
+    <ellipse cx='628' cy='108' rx='350' ry='19' fill='#fbf2e5'/>
+    <ellipse cx='1074' cy='190' rx='310' ry='22' fill='#fdf5e7'/>
+    <ellipse cx='1362' cy='92' rx='210' ry='15' fill='#fcf4e8'/>
+    <ellipse cx='852' cy='246' rx='400' ry='16' fill='#fbf0dd'/>
   </g>
 
-  <rect x="72" y="248" width="216" height="2.5" fill="url(#rule)"/>
+  <path d='M0,404 L78,392 L146,399 L212,384 L287,393 L352,376 L421,388 L489,370 L556,381 L622,364 L688,376 L751,358 L818,371 L886,355 L952,368 L1018,352 L1084,366 L1150,349 L1216,362 L1284,346 L1352,360 L1420,351 L1500,358 L1500,500 L0,500 Z' fill='url(#r1)' opacity='0.9'/>
+
+  <rect y='356' width='1500' height='96' fill='url(#haze)' filter='url(#hazeblur)' opacity='0.5'/>
+
+  <path d='M0,430 L92,419 L172,426 L248,408 L328,419 L404,399 L482,412 L558,392 L634,404 L710,386 L786,399 L862,381 L938,394 L1012,376 L1090,390 L1166,372 L1244,386 L1320,369 L1396,383 L1462,374 L1500,380 L1500,500 L0,500 Z' fill='url(#r2)'/>
+
+  <rect y='392' width='1500' height='78' fill='url(#haze)' filter='url(#hazeblur)' opacity='0.55'/>
+
+  <path d='M0,458 L86,449 L164,455 L242,441 L322,450 L400,434 L478,445 L556,429 L634,440 L712,424 L790,436 L868,420 L946,432 L1024,417 L1102,429 L1178,414 L1254,427 L1332,413 L1410,425 L1474,417 L1500,421 L1500,500 L0,500 Z' fill='url(#r3)'/>
+
+  <rect y='432' width='1500' height='64' fill='url(#haze)' filter='url(#hazeblur)' opacity='0.34'/>
+
+  <path d='M0,481 L104,474 L198,478 L292,470 L386,477 L478,468 L568,474 L652,464 L742,471 L828,462 L914,469 L998,461 L1074,468 L1128,451 L1178,430 L1228,405 L1274,383 L1312,368 L1348,392 L1384,410 L1418,398 L1456,416 L1500,424 L1500,500 L0,500 Z' fill='url(#front)'/>
+  <path d='M1128,451 L1178,430 L1228,405 L1274,383 L1312,368 L1348,392 L1384,410 L1418,398 L1456,416 L1500,424' fill='none' stroke='url(#rim)' stroke-width='2.4' opacity='0.7'/>
+
+  <use href='#feather' x='759' y='140' width='33' height='43'/>
+  <g font-family='Georgia, "Times New Roman", serif'>
+    <text x='812' y='178' fill='#16202b' font-size='30' letter-spacing='4'>wynfall</text>
+    <text x='762' y='286' fill='#131c26' font-size='90' letter-spacing='-2'>Corey Higgins</text>
+    <text x='764' y='364' fill='#2a3641' font-size='56' font-style='italic'>founder and engineer</text>
+  </g>
+  <g font-family='"Segoe UI", -apple-system, Helvetica, Arial, sans-serif'>
+    <text x='766' y='412' fill='#3a4650' font-size='22'>Private AI for writing, decisions and code.</text>
+    <text x='766' y='444' fill='#16202b' font-size='22' font-weight='600'>Early access at wynfall.dev</text>
+  </g>
+
+  <rect width='1500' height='500' filter='url(#grain)' opacity='0.05'/>
 </svg>
