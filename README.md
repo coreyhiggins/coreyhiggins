@@ -1,34 +1,33 @@
-<img src="https://raw.githubusercontent.com/coreyhiggins/coreyhiggins/main/banner.svg" alt="Corey Higgins, founder and engineer at Wynfall Studios" width="100%">
-
-<p align="center">
-  <em>Private AI for writing, decisions and code.</em>
-</p>
+<img src="https://raw.githubusercontent.com/coreyhiggins/coreyhiggins/main/banner.svg" alt="Corey Higgins, founder and head of engineering at Wynfall Studios" width="100%">
 
 <br>
 
 I founded [Wynfall Studios](https://wynfall.dev). I train the Wynfall model family on GPUs I run myself, and I build the products around it.
 
-Most of the work stays closed, and that is the product: prompts are not training data, and the pipeline behind the models is not for sale. What I can show lives here.
+Most of the work stays closed, and that is the product. Nothing you give it trains a model unless you send it to us as feedback, and that is a rule in our Terms rather than a setting to find. The pipeline behind the models is not for sale. What I can show lives here.
 
 <br>
 
-## The models
+## The model
+
+**[Sigel](https://wynfall.dev)** is the Wynfall model. Deeper reasoning for code, writing and long documents, up to 262K tokens of context, on every plan including Free. You choose how hard it thinks, from Low to Max.
+
+<br>
+
+## Where it runs
 
 | | |
 |---|---|
-| **[Sigel](https://wynfall.dev)** | Writing and reasoning. Long context, quiet voice, no filler. |
-| **Ken** | Code. Reads the repository before it writes, and stops when a fix fails twice. |
-| **Nova** | Research and synthesis. Wide reading, cited answers. |
+| **[Chat](https://chat.wynfall.dev)** | In the browser. Chats are kept in your browser, encrypted with a key that never leaves it. |
+| **[Wynfall Desktop](https://wynfall.dev)** | Windows. Your chats, files and projects in one window, with Sigel or a model running on your own machine. |
+| **Wynfall Code** | Sigel in your terminal. It reads the project, runs the tests, asks before it acts. |
+| **Wynfall Design** | Pictures from a description, made on your own PC. Nothing you make leaves the machine. |
 
 <br>
 
-## What I am building
+## Running inference myself
 
-**Wynfall Desktop.** A local-first app where the models actually live. Sessions stay on the machine they started on.
-
-**Wynfall Code.** The same models, in the terminal, with the discipline to read before it edits.
-
-**Inference, run in-house.** A GH200 serving production, and two 3090s in the lab for the next thing.
+Production is a GH200. The lab is two 3090s, and that is where the next thing gets figured out before it goes anywhere near a customer.
 
 <br>
 
