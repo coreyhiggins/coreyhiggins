@@ -104,6 +104,8 @@
   <path d='M0,481 L104,474 L198,478 L292,470 L386,477 L478,468 L568,474 L652,464 L742,471 L828,462 L914,469 L998,461 L1074,468 L1128,451 L1178,430 L1228,405 L1274,383 L1312,368 L1348,392 L1384,410 L1418,398 L1456,416 L1500,424 L1500,500 L0,500 Z' fill='url(#front)'/>
   <path d='M1128,451 L1178,430 L1228,405 L1274,383 L1312,368 L1348,392 L1384,410 L1418,398 L1456,416 L1500,424' fill='none' stroke='url(#rim)' stroke-width='2.4' opacity='0.7'/>
 
+  <ellipse cx='1020' cy='300' rx='430' ry='215' fill='#fbf1de' opacity='0.34' filter='url(#soft)'/>
+
   <use href='#feather' x='759' y='140' width='33' height='43'/>
   <g font-family='Georgia, "Times New Roman", serif'>
     <text x='812' y='178' fill='#16202b' font-size='30' letter-spacing='4'>wynfall</text>
